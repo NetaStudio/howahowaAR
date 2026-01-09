@@ -15,13 +15,11 @@
 <body>
 <model-viewer
     src="howahowa.glb"
-    ios-src="howahowa.usdz"
-    alt="Astronaut model"
     ar
     ar-modes="webxr"
     camera-controls
-    autoplay animation-name="idle"
-    shadow-intensity="1"
+    touch-action="none"
+    style="width: 100vw; height: 100vh;">
 >
     <button slot="ar-button" id="ar-button">
         AR撮影
@@ -30,6 +28,7 @@
 </body>
 
 </html>
+
 
 
 
