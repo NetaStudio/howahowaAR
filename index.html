@@ -14,12 +14,14 @@
 </head>
 <body>
 <model-viewer
-    src="howahowa.glb"
+    src="kanikama_ar.glb"
+    ios-src="kanikama_ar.usdz"
+    alt="Astronaut model"
     ar
     ar-modes="webxr"
     camera-controls
-    touch-action="none"
-    style="width: 100vw; height: 100vh;">
+    autoplay animation-name="idle"
+    shadow-intensity="1"
 >
     <button slot="ar-button" id="ar-button">
         AR撮影
@@ -28,6 +30,7 @@
 </body>
 
 </html>
+
 
 
 
