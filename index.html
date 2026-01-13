@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR強制テスト</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
-    <style>
-        body { margin: 0; }
-        model-viewer { width: 100vw; height: 100vh; background-color: #eee; }
-        
-        /* ボタンを強制的に画面中央下へ、かつ最前面に表示 */
-        #ar-button {
-            background-color: #ff0000; /* 目立つ赤色 */
-            color: white;
-            border-radius: 8px;
-            border: none;
-            padding: 15px 30px;
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-            display: block !important; /* 強制表示 */
-        }
-    </style>
-</head>
-<body>
-
 <model-viewer 
-    src="howahowa.glb" 
+    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
     ar 
     ar-modes="webxr" 
     camera-controls
+    style="width: 100vw; height: 100vh;"
 >
-    <button slot="ar-button" id="ar-button">
-        ARを起動（ここをタップ）
+    <button slot="ar-button" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); padding:20px; background:red; color:white;">
+        宇宙飛行士でARテスト
     </button>
 </model-viewer>
-
-</body>
-</html>
