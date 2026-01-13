@@ -1,11 +1,31 @@
-<model-viewer 
-    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
-    ar 
-    ar-modes="webxr" 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほわほわちゃんＡＲ</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<model-viewer
+    src="howahowa.glb"
+    ios-src="howahowa.usdz"
+    alt="Astronaut model"
+    ar
+    ar-modes="webxr"
     camera-controls
-    style="width: 100vw; height: 100vh;"
+    autoplay animation-name="idle"
+    shadow-intensity="1"
 >
-    <button slot="ar-button" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); padding:20px; background:red; color:white;">
-        宇宙飛行士でARテスト
+    <button slot="ar-button" id="ar-button">
+        AR撮影
     </button>
 </model-viewer>
+</body>
+</html>
